@@ -1,0 +1,7 @@
+CVout/*.tex
+*.log
+*.bcf
+*.run.xml
+*.aux
+*.pdf
+inputs.tex
