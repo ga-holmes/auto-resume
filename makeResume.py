@@ -29,7 +29,7 @@ with open(os.path.join( tex_path, 'info.tex'), 'w') as i_out:
     i_out.write(info_str)
 
 # file for personal summary
-profile_str = rf.create_cvsection("Personal Profile") + rf.create_cvparagraph(data['summary'])
+profile_str = rf.create_cvsection("Summary") + rf.create_cvparagraph(data['summary'])
 with open(os.path.join( tex_path, 'summary.tex'), 'w') as s_out:
     s_out.write(profile_str)
 
