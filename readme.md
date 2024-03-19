@@ -7,15 +7,16 @@ This program takes CV informaton from a JSON file and compiles it into a defined
 I encourage anyone who likes this idea to implement other LaTeX formats that can read and compile the information in `resumeData.json`.
 
 ### Next Steps
-- Standardize `makeResume.py`, options in a JSON or XML file.
-- Implement more LaTeX formats.
-- Allow user to specify which format to use in the settings file.
+- [] Run everything with one command
+- [] Standardize `makeResume.py`, options in a JSON or XML file.
+- [] Implement more LaTeX formats.
+- [] Allow user to specify which format to use in the settings file.
 
 ### Credit
 The russell class is available on its own at https://github.com/themagicalmammal/Resume, all credit for the latex class and the base `resume.tex` file goes to the contributors to that repository.
 - View on overleaf: https://www.overleaf.com/latex/templates/russelresume/zqnypvvjsfvq
 
-* this is not a forked repository since the .tex files & definitions are intended to be an example for using this format to add more LaTeX resume templates.
+*this is not a forked repository since the .tex files & definitions are intended to be an example for using this format to add more LaTeX resume templates.*
 
 ### Requirements
 
