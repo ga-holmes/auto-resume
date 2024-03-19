@@ -1,0 +1,109 @@
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{russell}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% russell Colors: russell-emerald, russell-skyblue, russell-red, russell-pink, russell-orange
+%                 russell-nephritis, russell-concrete, russell-darknight, russell-purple
+\colorlet{russell}{russell-black}
+% Uncomment if you would like to specify your own color
+% \definecolor{russell}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with russell color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{./examples/profile}
+% \name{first}{last}
+% \position{Software Architect{\enskip\cdotp\enskip}Security Expert}
+% \address{}
+
+% \mobile{number}
+% \email{address}
+%\dateofbirth{January 1st, 1970}
+% \homepage{website} 
+% \github{}
+% \linkedin{}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \kaggle{kaggle-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
+
+% \quote{``Simplicity is deceptively complicated."}
+
+% IMPORT LINE FOR ABOVE INFO HERE
+\input{../CVout/info.tex}
+
+
+%-------------------------------------------------------------------------------
+ %	BIBLIOGRAPHY
+ %-------------------------------------------------------------------------------
+% \addbibresource{cv/references.bib}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[L]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {}
+  {\thepage}
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+
+% NEED WAY TO ORGANIZE INPUTS PROPERLY
+% \input{inputs.tex} 
+
+\input{../CVout/summary.tex}
+\input{../CVout/certs.tex}
+\input{../CVout/education.tex}
+\input{../CVout/experience.tex}
+\input{../CVout/projects.tex}
+\input{../CVout/volunteer.tex}
+\input{../CVout/skills.tex}
+\input{../CVout/achievements.tex}
+% \input{CVout/interests.tex}
+% \input{cv/languages.tex}
+
+\vspace*{\fill}
+\centering{\textbf{References available upon request.}}
+%-------------------------------------------------------------------------------
+\end{document}

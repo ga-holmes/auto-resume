@@ -1,0 +1,71 @@
+{
+    "first-name": "",
+    "last-name": "",
+    "location": "",
+    "phone": "",
+    "email": "",
+    "linkedIn": "",
+    "website": "",
+    "git": "",
+    "summary": "",
+    "certifications": [
+        {
+            "type": "",
+            "list": []
+        }
+    ],
+    "skills": [
+        {
+            "type": "",
+            "list": []
+        }
+    ],
+    "education": [
+        {
+            "school": "",
+            "program": "",
+            "points": [],
+            "relevant-skills": [],
+            "year": "",
+            "location": ""
+        }
+    ],
+    "projects": [
+        {
+            "title": "",
+            "description": "",
+            "points": [],
+            "relevant-skills": [],
+            "year": "",
+            "location": ""
+        }
+    ],
+    "work-experience": [
+        {
+            "title": "",
+            "employer": "",
+            "points": [],
+            "relevant-skills": [],
+            "year": "",
+            "location": ""
+        }
+    ],
+    "volunteer-experience":[
+        {
+            "title": "",
+            "organization": "",
+            "points": [],
+            "relevant-skills": [],
+            "year": "",
+            "location": ""
+        }
+    ],
+    "achievements": [
+        {
+            "award": "",
+            "event": "",
+            "location": "",
+            "year": ""
+        }
+    ]
+}
