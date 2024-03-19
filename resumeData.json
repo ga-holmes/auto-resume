@@ -1,0 +1,209 @@
+{
+    "first-name": "Garrett Poop",
+    "last-name": "Holmes",
+    "location": "Toronto, ON",
+    "phone": "647-470-2263",
+    "email": "garrett.a.holmes01@gmail.com",
+    "linkedIn": "https://www.linkedin.com/in/garrett-holmes-b4a219225/",
+    "website": "ga-holmes.github.io",
+    "github": "gh-holmes",
+    "summary": "Post-secondary graduate with experience in service and education industries looking for opportunities in diverse environments where I can grow my skills and gain unique experiences through personal interactions. Proven abilities as a facilitator and guide as well as in planning and organization in dynamic settings. Would like to contribute to a positive team atmosphere.",
+    "certifications": [
+        {
+            "type": "Certifications",
+            "list": ["SmartServe", "Emergency First Aid", "Wilderness First Responder"]
+        }
+    ],
+    "skills": [
+        {
+            "type": "Programming Languages",
+            "list": ["C", "Python", "Java", "HTML", "CSS", "Javascript"]
+        },
+        {
+            "type": "Software Environments",
+            "list": ["Linux/UNIX", "React", "NodeJS", "AWS"]
+        },
+        {
+            "type": "Artificial Intelligence",
+            "list": ["AI Models", "PyTorch", "numpy", "RCNN"]
+        },
+        {
+            "type": "GIS Tools",
+            "list": ["ArcGIS", "QGIS", "WhiteboxTools", "arcpy"]
+        },
+        {
+            "type": "Office Tools",
+            "list": ["Microsoft Office", "Excel", "Adobe Suite"]
+        },
+        {
+            "type": "Creative Skills",
+            "list": ["Photography, Videography, 2D animations", "Video Production", "Video Editing"]
+        }
+    ],
+    "education": [
+        {
+            "school": "University of Guelph",
+            "program": "Honours Bachelor of Computing, Major in Computer Science, Minor in Geographic Information Systems and Environmental Analysis",
+            "points": [
+                "Graduated with Distinction."
+            ],
+            "courses": [
+                "Software Engineering", "Software Development", "Computational Intelligence", "Computer Graphics", "Cloud Computing", "Parallel Programming", "Network Programming", "Systems Programming", "Compilers"
+            ],
+            "year": "Sept 2019 - Dec 2023",
+            "location": "Guelph, ON"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Program Planner Website",
+            "description": "Full-stack serviced webpage delivering detailed information about prerequisites, course searching, program informaition using web-scraped university data, built on React.",
+            "points": [
+                "Used AGILE methodology in a team setting to ensure effective software development as a team leader across multiple sprints",
+                "Built user-friendly front end application using React, React Flow and other libraries, Bootstrap, and Javascript.",
+                "Organized weekly requirements, scheduled team meetings, lead code review sessions",
+                "Used Flask, NGINX, Python for backend development on a Linux server."
+            ],
+            "relevant-skills": ["Javascript", "HTML", "React", "Python", "Full-stack", "AGILE", "Team"],
+            "year": "2022",
+            "location": ""
+        },
+        {
+            "title": "The Grove Youth Wellness Hubs App Design",
+            "description": "Took part in designing a social media app for a local community partner.",
+            "points": [
+                "Communicated with client to assemble requirements and key features for a social media app.",
+                "Involed Waterfall design methodology to build a development plan, collaborated with team members on requirements and UI design."
+            ],
+            "relevant-skills": ["Waterfall", "Project Design", "Team", "UI Design", "Application Development"],
+            "year": "2021",
+            "location": ""
+        },
+        {
+            "title": "Moose Habitat Suitability Modelling in Northern Ontario",
+            "description": "Evaluation and analysis of Moose Habitat sustainability in the Missinaibi Forest",
+            "points": [
+                "Collaborated with students and graduate to identify areas of concern, research plan.",
+                "Performed a detailed literature review of moose habitat suitability and environmental concerns related to indstrial logging, including government policy and forestry guidelines.",
+                "Investaged and prepared vector data provided through government resources and forestry for analysis.",
+                "Derived raster layers and relevant information and developed a Habitat suitability model using ArcGIS pro."
+            ],
+            "relevant-skills": ["GIS", "ESRI", "ArcGIS", "Research", "Team", "Literature Review", "Enviornmental Analysis", "Data processing", "data management"],
+            "year": "2023",
+            "location": ""
+        },
+        {
+            "title": "Ant - Director of Photography, Producer",
+            "description": "Independently produced feature length film.",
+            "points": [
+                "Helped plan and execute shooting locations, storyboards, direction, lighting, sound and videography",
+                "Operated camera and audio equipment on set.",
+                "Worked closely with director and actors to ensure smooth and efficient shoot days.",
+                "Intimately involved in pre and post-production processes."
+            ],
+            "relevant-skills": ["creative", "photography", "videography", "lighting", "organization", "project management"],
+            "year": "2024",
+            "location": ""
+        },
+        {
+            "title": "Sole of a Salesman - Composer",
+            "description": "Composed, recordered, and produced soundtrack for independent student short horror film.",
+            "points": [
+                "Wrote, recorded, and produced music using digital tools and real instruments.",
+                "Worked closely with director to match tone of film and assess needs."
+            ],
+            "relevant-skills": ["communication", "music production", "audio recording"],
+            "year": "2022",
+            "location": ""
+        }
+    ],
+    "work-experience": [
+        {
+            "title": "Undergraduate Research Assistant",
+            "employer": "University of Guelph",
+            "points": [
+                "Worked under Dr. Stacey Scott to review and summarize academic publications relating precision agriculture and computer vision.",
+                "Self-directed research of contemporary neural network concepts and methods.",
+                "Exploration of Mask-RCNN, YOLO, detectron2 API networks.",
+                "Used PyTorch and OpenCV to train a residual neural network to classify cattle in frames of video to support concurrent agriculture research."
+            ],
+            "relevant-skills": ["AI", "research", "Literature Review", "Python", "openCV", "Computer Vision", "MaskRCNN", "resnet", "neural networks", "Application Development", "pytorch", "numpy"],
+            "year": "2022",
+            "location": "Guelph, ON"
+        },
+        {
+            "title": "Rock Climbing Monitor",
+            "employer": "University of Guelph Athletic Centre",
+            "points": [
+                "Helped build and maintain a thriving community of climbing enthusiasts on campus.",
+                "Interacted personally with patrons and provided quality service to members",
+                "Facilitated orientations, “Learn to Climb” sessions, first aid support, taught belay certification.",
+                "Managed sale of rock climbing equipment and assessed needs of customers."
+            ],
+            "relevant-skills": ["climbing", "athletics", "customer service", "community engagement", "products", "support"],
+            "year": "2022/2023",
+            "location": "Guelph, ON"
+        },
+        {
+            "title": "Outdoor Educator",
+            "employer": "Kandalore Outdoor Education Centre",
+            "points": [
+                "Lead school groups grades 6 to 11 in educational and team-building activities as a group leader.",
+                "Interacted with teachers to ensure quality leadership for their students during their time at Kandalore.",
+                "Facilitated technical activities including indoor and outdoor rock climbing, high ropes course, map orienteering, etc.",
+                "Worked with dedicated staff team to maintain a functioning site including a variety of manual labour and maintenance tasks."
+            ],
+            "relevant-skills": ["leadership", "hard skills", "climbing", "team", "education", "outdoors", "maintenance", "communication", "management"],
+            "year": "2023",
+            "location": "Kawartha Highlands, ON"
+        },
+        {
+            "title": "Camp Counselor/River Guide",
+            "employer": "Camp Kandalore",
+            "points": [
+                "Facilitated camp activities including ORCA canoe progression, nature walks, sailing as well as assigned-cabin activities.",
+                "Planned and organized 3-to-7-day white-water and flat-water wilderness canoe camping trips for groups of 8 to 10 campers.",
+                "Worked with staff to ensure safe environments for learning and adventure. Promoted clean and sustainable camping practices.",
+                "Monitored group dynamics and encouraged growth of teamwork and communication skills among campers.",
+                "Maintained a clean environment in-camp including boat repair and site maintenance."
+            ],
+            "relevant-skills": ["leadership", "hard skills", "management", "team", "education", "outdoors", "maintenance", "communication"],
+            "year": "2019/2021",
+            "location": "Kawartha Highlands, ON"
+        },
+        {
+            "title": "Cook",
+            "employer": "Stampede Ranch",
+            "points": [
+                "Worked in a fast-paced high-pressure environment to ensure timely delivery of quality prepared food.",
+                "Maintained a clean and organized work environment including closing procedures.",
+                "Worked with other staff in team environment to maintain efficient work environment."
+            ],
+            "relevant-skills": ["fast-paced", "service", "cooking", "organization"],
+            "year": "2020",
+            "location": "Guelph, ON"
+        }
+    ],
+    "volunteer-experience":[
+        {
+            "title": "Quartermaster",
+            "organization": "University of Guelph Outdoors Club",
+            "points": [
+                "Student-run club dedicated to outdoor enthusiats on campus, oranizing events including canoe and hiking trips, as well as outdoors gear rentals.",
+                "Assisted club members in finding and renting club equipment, handled deposits and safe boxes.",
+                "Maintained and organized gear inventory, gear condition, etc."
+            ],
+            "relevant-skills": ["organization", "customer service", "maintenance", "management", "outdoors"],
+            "year": "2021 - 2023",
+            "location":"Guelph, ON"
+        }
+    ],
+    "achievements": [
+        {
+            "award": "Graduated with Distinction",
+            "event": "Univrsity of Guelph",
+            "location": "Guelph, ON",
+            "year": "2023"
+        }
+    ]
+}
