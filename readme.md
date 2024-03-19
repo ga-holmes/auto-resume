@@ -22,7 +22,7 @@ The russell class is available on its own at https://github.com/themagicalmammal
 Python 3.x must be installed on your computer
 
 To compile your finised files, install a LaTeX compiler for your system. I am using MiKTeX due to its small size:
-    - Install: https://miktex.org/
+- Install: https://miktex.org/
 
 ### Filling in the JSON
 `resumeData.json` is currently filled with my personal CV information as an example (feel free to hire me). You can test the file generation with this, or fill in your own information.
