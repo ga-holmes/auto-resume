@@ -4,9 +4,19 @@
 import json
 import russelFormat as rf
 import os
+import sys
+
+# searches sys.argv for '-k' and returns a new list starting at that position
+def keyword_args():
+
+    for i, a in enumerate(sys.argv):
+        if a == "-k":
+            return sys.argv[i:]
+
+    return []
 
 # put in function so it's call-able by other scripts
-def makeTexFiles():
+def makeTexFiles(args = []):
 
     tex_path = "CVout"
     resume_path = "texFiles"
@@ -28,15 +38,21 @@ def makeTexFiles():
     proj_obj = data['projects'] # by deafault, set to entire list of objects
     vol_obj = data['volunteer-experience'] # by deafault, set to entire list of objects
 
+    keywords = options['keywords']
+
+    # overwrite keywords if args is not empty
+    if len(args) > 0:
+        keywords = args[1:]
+
     # only do this if there are some keywords
-    if len(options['keywords']) > 0:
+    if len(keywords) > 0:
 
         exp_obj = [] # clear the object
         proj_obj = [] # clear the object
         vol_obj = [] # clear the object
 
         # create sublist of data with relevant points
-        for k in options['keywords']:
+        for k in keywords:
             
             # items in the lists are converted to lowercase for comparison (NOTE: slow?)
             for w in data['work-experience']:
@@ -129,5 +145,12 @@ def makeTexFiles():
     return 1
 
 
-# run the above function
-makeTexFiles() 
+# Defining main function 
+def main(): 
+    makeTexFiles(args=keyword_args())
+  
+  
+# Using the special variable  
+# __name__ 
+if __name__=="__main__": 
+    main() 
