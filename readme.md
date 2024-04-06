@@ -33,8 +33,7 @@ To compile your finised files, install a LaTeX compiler for your system. I am us
 
 - [NOTE: not implemented yet]`resumeOptions.json` contains optional specifications for content to be included in the resume, empty by default
     - 'keywords': list of keywords, resume will only contain sections from `resumeData.json` that contain matching keywords (ie. relevant-skills, etc.)
-    - 'section-order': specify the order that you would like the sections from `resumeData.json` to appear in, in the final resume. (default order is contained, if empty will be alphabetical)
-    - 'exclude-sections': choose which parts of `resumeData.json` to exclude from the final output pdf. (ex. add 'summary' to the list to exclude the summary section)
+    - 'sections-to-include': list of sections within `/CVout` that are to be included in the final pdf. Any new sections/extensions to the code must be listed here in order to appear. This list also represents the order that the sections will appear in the final pdf.
 
 ### Running/Compiling
 

@@ -127,3 +127,6 @@ def create_bibliography(pub_list):
     out_str += f"\\nocite{{{p}}}\n"
 
   out_str += "\\newrefcontext[sorting=ydnt]\n\\printbibliography[heading=none]\n\\end{refsection}"  
+
+def add_import(filename):
+   return "\\input{../CVout/" + filename + "}\n"

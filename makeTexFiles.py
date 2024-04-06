@@ -9,17 +9,21 @@ import os
 def makeTexFiles():
 
     tex_path = "CVout"
+    resume_path = "texFiles"
+
     if not os.path.exists(tex_path):
         os.makedirs(tex_path)
     
     # Opening JSON file
     with open('resumeData.json', 'r', encoding='utf-8') as f:
-        # returns JSON object as 
-        # a dictionary
+        # returns JSON object as a dictionary
         data = json.load(f)
     
+    # Opening options JSON file
+    with open('resumeOptions.json', 'r', encoding='utf-8') as of:
+        options = json.load(of)
 
-    # file for basic information
+    # file for basic information - goes into /texFiles directory since it is imported seperately from other files in resume.tex
     info_str = rf.add_cv_info(data['first-name'], data['last-name'], 
                             location=data['location'],
                             phone=data['phone'],
@@ -28,7 +32,7 @@ def makeTexFiles():
                             website=data['website'],
                             github=data['github']
                             )
-    with open(os.path.join( tex_path, 'info.tex'), 'w') as i_out:
+    with open(os.path.join( resume_path, 'info.tex'), 'w') as i_out:
         i_out.write(info_str)
 
     # file for personal summary
@@ -71,14 +75,16 @@ def makeTexFiles():
     with open(os.path.join( tex_path, 'achievements.tex'), 'w') as a_out:
         a_out.write(award_str)
 
-    # make list of things to import
+
+    # make list of things to import organized by filename
         
     import_str = ""
 
-    for f in os.listdir('Cvout'):
-        import_str += "\\input{../CVout/" + f + "}\n"
+    # list by order specified in resumeOptions.json
+    for f in options['sections-to-include']:
+        import_str += rf.add_import(f + ".tex")
 
-    with open(os.path.join( 'texFiles', 'inputs.tex'), 'w') as inputs_out:
+    with open(os.path.join( resume_path, 'inputs.tex'), 'w') as inputs_out:
         inputs_out.write(import_str)
 
     return 1

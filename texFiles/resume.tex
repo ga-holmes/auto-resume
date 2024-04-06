@@ -62,7 +62,7 @@
 % \quote{``Simplicity is deceptively complicated."}
 
 % IMPORT LINE FOR ABOVE INFO HERE
-\input{../CVout/info.tex}
+\input{info.tex}
 
 
 %-------------------------------------------------------------------------------
@@ -89,17 +89,19 @@
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 
-% NEED WAY TO ORGANIZE INPUTS PROPERLY
-% \input{inputs.tex} 
+% import according to resumeOptions.json
+\input{inputs.tex} 
 
-\input{../CVout/summary.tex}
-\input{../CVout/certs.tex}
-\input{../CVout/education.tex}
-\input{../CVout/experience.tex}
-\input{../CVout/projects.tex}
-\input{../CVout/volunteer.tex}
-\input{../CVout/skills.tex}
-\input{../CVout/achievements.tex}
+% uncomment to import independednt of json config (remains for of example)
+
+% \input{../CVout/summary.tex}
+% \input{../CVout/certs.tex}
+% \input{../CVout/education.tex}
+% \input{../CVout/experience.tex}
+% \input{../CVout/projects.tex}
+% \input{../CVout/volunteer.tex}
+% \input{../CVout/skills.tex}
+% \input{../CVout/achievements.tex}
 % \input{CVout/interests.tex}
 % \input{cv/languages.tex}
 

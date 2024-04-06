@@ -5,3 +5,4 @@ CVout/*.tex
 *.aux
 *.pdf
 inputs.tex
+info.tex
