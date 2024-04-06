@@ -7,7 +7,7 @@ This program takes CV informaton from a JSON file and compiles it into a defined
 I encourage anyone who likes this idea to implement other LaTeX formats that can read and compile the information in `resumeData.json`.
 
 ### Next Steps
-- [] Run everything with one command
+- [X] Run everything with one command
 - [] Standardize `makeResume.py`, options in a JSON or XML file.
 - [] Implement more LaTeX formats.
 - [] Allow user to specify which format to use in the settings file.
@@ -26,13 +26,25 @@ To compile your finised files, install a LaTeX compiler for your system. I am us
 - Install: https://miktex.org/
 
 ### Filling in the JSON
-`resumeData.json` is currently filled with my personal CV information as an example (feel free to hire me). You can test the file generation with this, or fill in your own information.
-`resumeDataFormat.json` contains JSON in the same fomat as `resumeData.json` but with blank entries. You can either copy this and fill in your information, or use it as a guideline. Be careful not to make any changes to the format of the JSON files without ensuring the change is represented in each one, and that it won't mess with the code in `makeResume.py`.
+
+- `resumeData.json` is currently filled with my personal CV information as an example (feel free to hire me). You can test the file generation with this, or fill in your own information.
+
+- `resumeDataFormat.json` contains JSON in the same fomat as `resumeData.json` but with blank entries. You can either copy this and fill in your information, or use it as a guideline. Be careful not to make any changes to the format of the JSON files without ensuring the change is represented in each one, and that it won't mess with the code in `makeResume.py`.
+
+- [NOTE: not implemented yet]`resumeOptions.json` contains optional specifications for content to be included in the resume, empty by default
+    - 'keywords': list of keywords, resume will only contain sections from `resumeData.json` that contain matching keywords (ie. relevant-skills, etc.)
+    - 'section-order': specify the order that you would like the sections from `resumeData.json` to appear in, in the final resume. (default order is contained, if empty will be alphabetical)
+    - 'exclude-sections': choose which parts of `resumeData.json` to exclude from the final output pdf. (ex. add 'summary' to the list to exclude the summary section)
 
 ### Running/Compiling
 
+Quick Run:
+- run `py makeResume.py` to run all processes and generate a resume.pdf file in `/texFiles`
+
+Run Individually:
+
 Step 1:
-- run `py makeResume.py`
+- run `py makeTexFiles.py`
 - The .tex files should be created and put in `/CVout`
 
 Step 2:
