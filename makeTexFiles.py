@@ -23,6 +23,35 @@ def makeTexFiles():
     with open('resumeOptions.json', 'r', encoding='utf-8') as of:
         options = json.load(of)
 
+    # filter sections to only include elements with keywords
+    exp_obj = data['work-experience'] # by deafault, set to entire list of objects
+    proj_obj = data['projects'] # by deafault, set to entire list of objects
+    vol_obj = data['volunteer-experience'] # by deafault, set to entire list of objects
+
+    # only do this if there are some keywords
+    if len(options['keywords']) > 0:
+
+        exp_obj = [] # clear the object
+        proj_obj = [] # clear the object
+        vol_obj = [] # clear the object
+
+        # create sublist of data with relevant points
+        for k in options['keywords']:
+            
+            # items in the lists are converted to lowercase for comparison (NOTE: slow?)
+            for w in data['work-experience']:
+                if k.lower() in (item.lower() for item in w['relevant-skills']):
+                    exp_obj.append(w)
+
+            for w in data['projects']:
+                if k.lower() in (item.lower() for item in w['relevant-skills']):
+                    proj_obj.append(w)
+
+            for w in data['volunteer-experience']:
+                if k.lower() in (item.lower() for item in w['relevant-skills']):
+                    vol_obj.append(w)
+
+
     # file for basic information - goes into /texFiles directory since it is imported seperately from other files in resume.tex
     info_str = rf.add_cv_info(data['first-name'], data['last-name'], 
                             location=data['location'],
@@ -46,17 +75,17 @@ def makeTexFiles():
         edu_out.write(education_la_string)
 
     # Create file for work experience
-    experience_la_string = rf.create_cvsection("Work Experience") + rf.create_cventries(data['work-experience'], 'employer', 'title', 'location', 'year', 'points')
+    experience_la_string = rf.create_cvsection("Work Experience") + rf.create_cventries(exp_obj, 'employer', 'title', 'location', 'year', 'points')
     with open(os.path.join( tex_path, 'experience.tex'), 'w') as ex_out:
         ex_out.write(experience_la_string)
 
     # Create file for projects
-    projects_la_string = rf.create_cvsection("Projects") + rf.create_cventries(data['projects'], 'title', 'description', 'location', 'year', 'points')
+    projects_la_string = rf.create_cvsection("Projects") + rf.create_cventries(proj_obj, 'title', 'description', 'location', 'year', 'points')
     with open(os.path.join( tex_path, 'projects.tex'), 'w') as p_out:
         p_out.write(projects_la_string)
 
     # Create file for volunteer experience
-    volunteer_la_string = rf.create_cvsection("Volunteer Experience") + rf.create_cventries(data['volunteer-experience'], 'organization', 'title', 'location', 'year', 'points')
+    volunteer_la_string = rf.create_cvsection("Volunteer Experience") + rf.create_cventries(vol_obj, 'organization', 'title', 'location', 'year', 'points')
     with open(os.path.join( tex_path, 'volunteer.tex'), 'w') as v_out:
         v_out.write(volunteer_la_string)
 
@@ -82,7 +111,17 @@ def makeTexFiles():
 
     # list by order specified in resumeOptions.json
     for f in options['sections-to-include']:
-        import_str += rf.add_import(f + ".tex")
+
+        # do not include sections that are empty due to keywords
+        if f == 'experience' and len(exp_obj) > 0:
+            import_str += rf.add_import(f + ".tex")
+        elif f == 'projects' and len(proj_obj) > 0:
+            import_str += rf.add_import(f + ".tex")
+        elif f == 'volunteer' and len(vol_obj) > 0:
+            import_str += rf.add_import(f + ".tex")
+        elif f != 'experience' and f != 'projects' and f != 'volunteer':
+            import_str += rf.add_import(f + ".tex")
+
 
     with open(os.path.join( resume_path, 'inputs.tex'), 'w') as inputs_out:
         inputs_out.write(import_str)
