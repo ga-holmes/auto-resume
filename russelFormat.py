@@ -23,13 +23,16 @@ def add_cv_info(first_name, last_name, location="", phone="", email="", linkedIn
 
 # add a header
 def create_cvsection(title):
-    return f"\\cvsection{{{title}}}\n"
+    return f"\n\\cvsection{{{title}}}\n"
 
 def create_cvsubsection(title):
-    return f"\\cvsubsection{{{title}}}\n"
+    return f"\n\\cvsubsection{{{title}}}\n"
+
+def create_cvparagraph(content):
+   return f"\n\\begin{{cvparagraph}}\n{content}\n\\end{{cvparagraph}}\n"
 
 def create_cventries(entry_list, title_key, description_key, location_key, dates_key, notes_list_key, sub_list_key = ''):
-    out_str = "\\begin{cventries}\n"
+    out_str = "\n\\begin{cventries}\n"
 
     for e in entry_list:
         if sub_list_key == '':
@@ -41,13 +44,10 @@ def create_cventries(entry_list, title_key, description_key, location_key, dates
 
     return out_str
 
-def create_cvparagraph(content):
-   return f"\\begin{{cvparagraph}}\n{content}\n\\end{{cvparagraph}}\n"
-
 def create_cventry(title, description, location, dates, notes_list, sub_list = [], sub_list_key = ''):
 
     # triple brackets to get {} in f-string
-    out_str = f"\\cventry\n{{{description}}}\n{{{title}}}\n{{{location}}}\n{{{dates}}}"
+    out_str = f"\n\n\\cventry\n{{{description}}}\n{{{title}}}\n{{{location}}}\n{{{dates}}}"
 
     # add cvitems
     if (len(notes_list) > 0):
@@ -86,7 +86,7 @@ def create_bold_cvitem(sub_list, sub_list_key):
     return out_str
 
 def create_cvhonors(entry_list, award_key, event_key, location_key, dates_key):
-    out_str = "\\begin{cvhonors}\n"
+    out_str = "\n\\begin{cvhonors}\n"
 
     for e in entry_list:
       out_str += f"\\cvhonor\n{{{e[award_key]}}}\n{{{e[event_key]}}}\n{{{e[location_key]}}}\n{{{e[dates_key]}}}"
@@ -96,7 +96,7 @@ def create_cvhonors(entry_list, award_key, event_key, location_key, dates_key):
     return out_str
 
 def create_cvskills(skills_list, category_key, list_key):
-  out_str = "\\begin{cvskills}\n"
+  out_str = "\n\\begin{cvskills}\n"
 
   for c in skills_list:
     out_str += create_cvskill(c[category_key], c[list_key])
@@ -106,7 +106,7 @@ def create_cvskills(skills_list, category_key, list_key):
   return out_str
 
 def create_cvskill(category, skills):
-  out_str = f"\\cvskill\n{{{category}}}\n" + "{"
+  out_str = f"\n\\cvskill\n{{{category}}}\n" + "{"
 
   for s in skills:
       out_str += f" {s},"
@@ -121,7 +121,7 @@ def create_cvskill(category, skills):
 # add citable articles - pub_list contains the names of publications that are part of an accessible references.bib file
 def create_bibliography(pub_list):
    
-  out_str = "\\begin{refsection}\n"
+  out_str = "\n\\begin{refsection}\n"
 
   for p in pub_list:
     out_str += f"\\nocite{{{p}}}\n"
