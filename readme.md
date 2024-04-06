@@ -8,7 +8,7 @@ I encourage anyone who likes this idea to implement other LaTeX formats that can
 
 ### Next Steps
 - [X] Run everything with one command
-- [] Standardize `makeResume.py`, options in a JSON or XML file.
+- [X] Standardize `makeResume.py`, options in a JSON or XML file.
 - [] Implement more LaTeX formats.
 - [] Allow user to specify which format to use in the settings file.
 
@@ -32,18 +32,20 @@ To compile your finised files, install a LaTeX compiler for your system. I am us
 - `resumeDataFormat.json` contains JSON in the same fomat as `resumeData.json` but with blank entries. You can either copy this and fill in your information, or use it as a guideline. Be careful not to make any changes to the format of the JSON files without ensuring the change is represented in each one, and that it won't mess with the code in `makeResume.py`.
 
 - [NOTE: not implemented yet]`resumeOptions.json` contains optional specifications for content to be included in the resume, empty by default
-    - 'keywords': list of keywords, resume will only contain sections from `resumeData.json` that contain matching keywords (ie. relevant-skills, etc.)
+    - 'keywords': list of keywords, resume will only contain sections from `resumeData.json` that contain matching keywords (ie. relevant-skills, etc.). These are overwritten/ignored if the '-k' cmd argument is used to specify keywords.
     - 'sections-to-include': list of sections within `/CVout` that are to be included in the final pdf. Any new sections/extensions to the code must be listed here in order to appear. This list also represents the order that the sections will appear in the final pdf.
 
 ### Running/Compiling
 
 Quick Run:
 - run `py makeResume.py` to run all processes and generate a resume.pdf file in `/texFiles`
+    - to specify keywords in the console (only include experience/projects/volunteer with specific relevant-skills), run with `-k` where all cmd args after `-k` are the keywords.
+    - `-k` on its own will run the script with no keywords & will include everything in `resumeData.json`
 
 Run Individually:
 
 Step 1:
-- run `py makeTexFiles.py`
+- run `py makeTexFiles.py` (* see abover for cmd options)
 - The .tex files should be created and put in `/CVout`
 
 Step 2:
