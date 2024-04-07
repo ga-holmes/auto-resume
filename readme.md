@@ -33,19 +33,18 @@ To compile your finised files, install a LaTeX compiler for your system. I am us
 
 - [NOTE: not implemented yet]`resumeOptions.json` contains optional specifications for content to be included in the resume, empty by default
     - 'keywords': list of keywords, resume will only contain sections from `resumeData.json` that contain matching keywords (ie. relevant-skills, etc.). These are overwritten/ignored if the '-k' cmd argument is used to specify keywords.
-    - 'sections-to-include': list of sections within `/CVout` that are to be included in the final pdf. Any new sections/extensions to the code must be listed here in order to appear. This list also represents the order that the sections will appear in the final pdf.
+    - 'sections-to-include': list of sections within `/CVout` that are to be included in the final pdf. Any new sections/extensions to the code must be listed here in order to appear. This list also represents the order that the sections will appear in the final pdf. If this list is empty, all sections in the `/CVout` folder will appear in alphabetical order by filename.
 
 ### Running/Compiling
 
 Quick Run:
 - run `py makeResume.py` to run all processes and generate a resume.pdf file in `/texFiles`
-    - to specify keywords in the console (only include experience/projects/volunteer with specific relevant-skills), run with `-k` where all cmd args after `-k` are the keywords.
-    - `-k` on its own will run the script with no keywords & will include everything in `resumeData.json`
+
 
 Run Individually:
 
 Step 1:
-- run `py makeTexFiles.py` (* see abover for cmd options)
+- run `py makeTexFiles.py`
 - The .tex files should be created and put in `/CVout`
 
 Step 2:
@@ -54,3 +53,25 @@ Step 2:
     - If this is your first time running, MiKTeX will need to install all requirements. I recommend un-checking "show me every time" as there are a lot of packages and it'll get annyoying OK-ing each one.
     - You may be able to compile with other LaTeX commands/formats. `pdflatex` did not work for me so I use `xelatex`.
 
+
+Command Line Args (`makeTexFiles.py` & `makeResume.py`):
+
+- `-k`: specify keywords in the console (only include experience/projects/volunteer with specific relevant-skills), run with 
+    - `-k` on its own will run the script with no keywords & will include everything in `resumeData.json`
+    - accepts cmd entries up until another reserved cmd arg appears.
+- `-e`: specify sections to exclude from the final pdf
+    - if a section given does not exist there will be no effect.
+- `-a`: ignore `resumeOptions.json` and include all files in `/CVout` in alphabetical order
+
+- example: `py makeResume.py -k 1 2 3 -e 4 5 6`
+    - keywords: 1, 2, 3
+    - excluding: 4, 5, 6
+- where `resumeOptions.json` contains 'keywords': [ 'ai' ]
+    - `py makeResume.py -k -e 4 5 6`
+        - keywords: []
+        - excluding: 4, 5, 6
+    - `py makeResume.py -e 4 5 6`
+        - keywords: ai
+        - excluding: 4, 5, 6, ...any sections without 'ai' in their 'relevant-skills' field.
+    
+    
