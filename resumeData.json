@@ -56,27 +56,16 @@
     ],
     "projects": [
         {
-            "title": "Program Planner Website",
-            "description": "Full-stack serviced webpage delivering detailed information about prerequisites, course searching, program informaition using web-scraped university data, built on React.",
+            "title": "Ant - Director of Photography, Producer",
+            "description": "Independently produced feature length film.",
             "points": [
-                "Used AGILE methodology in a team setting to ensure effective software development as a team leader across multiple sprints",
-                "Built user-friendly front end application using React, React Flow and other libraries, Bootstrap, and Javascript.",
-                "Organized weekly requirements, scheduled team meetings, lead code review sessions",
-                "Used Flask, NGINX, Python for backend development on a Linux server."
+                "Helped plan and execute shooting locations, storyboards, direction, lighting, sound and videography",
+                "Operated camera and audio equipment on set.",
+                "Worked closely with director and actors to ensure smooth and efficient shoot days.",
+                "Intimately involved in pre and post-production processes."
             ],
-            "relevant-skills": ["Javascript", "HTML", "React", "Python", "Full-stack", "AGILE", "Team"],
-            "year": "2022",
-            "location": ""
-        },
-        {
-            "title": "The Grove Youth Wellness Hubs App Design",
-            "description": "Took part in designing a social media app for a local community partner.",
-            "points": [
-                "Communicated with client to assemble requirements and key features for a social media app.",
-                "Involed Waterfall design methodology to build a development plan, collaborated with team members on requirements and UI design."
-            ],
-            "relevant-skills": ["Waterfall", "Project Design", "Team", "UI Design", "Application Development"],
-            "year": "2021",
+            "relevant-skills": ["creative", "photography", "videography", "lighting", "organization", "project management"],
+            "year": "2024",
             "location": ""
         },
         {
@@ -93,16 +82,16 @@
             "location": ""
         },
         {
-            "title": "Ant - Director of Photography, Producer",
-            "description": "Independently produced feature length film.",
+            "title": "Program Planner Website",
+            "description": "Full-stack serviced webpage delivering detailed information about prerequisites, course searching, program informaition using web-scraped university data, built on React.",
             "points": [
-                "Helped plan and execute shooting locations, storyboards, direction, lighting, sound and videography",
-                "Operated camera and audio equipment on set.",
-                "Worked closely with director and actors to ensure smooth and efficient shoot days.",
-                "Intimately involved in pre and post-production processes."
+                "Used AGILE methodology in a team setting to ensure effective software development as a team leader across multiple sprints",
+                "Built user-friendly front end application using React, React Flow and other libraries, Bootstrap, and Javascript.",
+                "Organized weekly requirements, scheduled team meetings, lead code review sessions",
+                "Used Flask, NGINX, Python for backend development on a Linux server."
             ],
-            "relevant-skills": ["creative", "photography", "videography", "lighting", "organization", "project management"],
-            "year": "2024",
+            "relevant-skills": ["Javascript", "HTML", "React", "Python", "Full-stack", "AGILE", "Team"],
+            "year": "2022",
             "location": ""
         },
         {
@@ -115,21 +104,32 @@
             "relevant-skills": ["communication", "music production", "audio recording"],
             "year": "2022",
             "location": ""
+        },
+        {
+            "title": "The Grove Youth Wellness Hubs App Design",
+            "description": "Took part in designing a social media app for a local community partner.",
+            "points": [
+                "Communicated with client to assemble requirements and key features for a social media app.",
+                "Involed Waterfall design methodology to build a development plan, collaborated with team members on requirements and UI design."
+            ],
+            "relevant-skills": ["Waterfall", "Project Design", "Team", "UI Design", "Application Development"],
+            "year": "2021",
+            "location": ""
         }
     ],
     "work-experience": [
         {
-            "title": "Undergraduate Research Assistant",
-            "employer": "University of Guelph",
+            "title": "Outdoor Educator",
+            "employer": "Kandalore Outdoor Education Centre",
             "points": [
-                "Worked under Dr. Stacey Scott to review and summarize academic publications relating precision agriculture and computer vision.",
-                "Self-directed research of contemporary neural network concepts and methods.",
-                "Exploration of Mask-RCNN, YOLO, detectron2 API networks.",
-                "Used PyTorch and OpenCV to train a residual neural network to classify cattle in frames of video to support concurrent agriculture research."
+                "Lead school groups grades 6 to 11 in educational and team-building activities as a group leader.",
+                "Interacted with teachers to ensure quality leadership for their students during their time at Kandalore.",
+                "Facilitated technical activities including indoor and outdoor rock climbing, high ropes course, map orienteering, etc.",
+                "Worked with dedicated staff team to maintain a functioning site including a variety of manual labour and maintenance tasks."
             ],
-            "relevant-skills": ["AI", "research", "Literature Review", "Python", "openCV", "Computer Vision", "MaskRCNN", "resnet", "neural networks", "Application Development", "pytorch", "numpy"],
-            "year": "2022",
-            "location": "Guelph, ON"
+            "relevant-skills": ["leadership", "hard skills", "climbing", "team", "education", "outdoors", "maintenance", "communication", "management"],
+            "year": "2023",
+            "location": "Kawartha Highlands, ON"
         },
         {
             "title": "Rock Climbing Monitor",
@@ -145,17 +145,17 @@
             "location": "Guelph, ON"
         },
         {
-            "title": "Outdoor Educator",
-            "employer": "Kandalore Outdoor Education Centre",
+            "title": "Undergraduate Research Assistant",
+            "employer": "University of Guelph",
             "points": [
-                "Lead school groups grades 6 to 11 in educational and team-building activities as a group leader.",
-                "Interacted with teachers to ensure quality leadership for their students during their time at Kandalore.",
-                "Facilitated technical activities including indoor and outdoor rock climbing, high ropes course, map orienteering, etc.",
-                "Worked with dedicated staff team to maintain a functioning site including a variety of manual labour and maintenance tasks."
+                "Worked under Dr. Stacey Scott to review and summarize academic publications relating precision agriculture and computer vision.",
+                "Self-directed research of contemporary neural network concepts and methods.",
+                "Exploration of Mask-RCNN, YOLO, detectron2 API networks.",
+                "Used PyTorch and OpenCV to train a residual neural network to classify cattle in frames of video to support concurrent agriculture research."
             ],
-            "relevant-skills": ["leadership", "hard skills", "climbing", "team", "education", "outdoors", "maintenance", "communication", "management"],
-            "year": "2023",
-            "location": "Kawartha Highlands, ON"
+            "relevant-skills": ["AI", "research", "Literature Review", "Python", "openCV", "Computer Vision", "MaskRCNN", "resnet", "neural networks", "Application Development", "pytorch", "numpy"],
+            "year": "2022",
+            "location": "Guelph, ON"
         },
         {
             "title": "Camp Counselor/River Guide",

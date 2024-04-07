@@ -6,7 +6,7 @@ import russelFormat as rf
 import os
 import sys
 
-reserved_cmd = ['-k', '-e', '-a']
+reserved_cmd = ['-k', '-e', '-a', '-n']
 
 # searches sys.argv for '-k' and returns a new list starting at that position
 def keyword_args():

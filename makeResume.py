@@ -1,13 +1,21 @@
 import os
+import sys
 from makeTexFiles import *
 
 # call makeTexFiles.py
 makeTexFiles(keywords_args=keyword_args(), exclude=exclude_args(), include_all_files=include_all_arg())
 
+filename = "resume"
+
+if '-n' in sys.argv:
+    i = sys.argv.index('-n')
+    if i+1 < len(sys.argv):
+        filename = sys.argv[i+1]
+
 # call tex compiler
 exec_dir = "./texFiles/"
 file = "resume.tex"
-cmd = "xelatex"
+cmd = f"xelatex --job-name={filename}"
 to_run = cmd + " " + file
 
 # change to new working directory and run latex compiler

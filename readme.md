@@ -27,7 +27,7 @@ To compile your finised files, install a LaTeX compiler for your system. I am us
 
 ### Filling in the JSON
 
-- `resumeData.json` is currently filled with my personal CV information as an example (feel free to hire me). You can test the file generation with this, or fill in your own information.
+- `resumeData.json` is currently filled with my personal CV information as an example (feel free to hire me). You can test the file generation with this, or fill in your own information. *NOTE: Entries on the resume pdf will appear in the order they are listed in the `resumeData.json` file.*
 
 - `resumeDataFormat.json` contains JSON in the same fomat as `resumeData.json` but with blank entries. You can either copy this and fill in your information, or use it as a guideline. Be careful not to make any changes to the format of the JSON files without ensuring the change is represented in each one, and that it won't mess with the code in `makeResume.py`.
 
@@ -62,6 +62,10 @@ Command Line Args (`makeTexFiles.py` & `makeResume.py`):
 - `-e`: specify sections to exclude from the final pdf
     - if a section given does not exist there will be no effect.
 - `-a`: ignore `resumeOptions.json` and include all files in `/CVout` in alphabetical order
+    - sections excluded via keywords or `-e` will still be excluded
+- `-n`: set the name of the output PDF *NOTE: `makeResume.py` ONLY*
+    - NOTE: `-n resume.pdf` will output `resume.pdf.pdf`
+    - default filename is `resume`
 
 - example: `py makeResume.py -k 1 2 3 -e 4 5 6`
     - keywords: 1, 2, 3
