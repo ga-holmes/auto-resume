@@ -2,7 +2,7 @@ import os
 from makeTexFiles import *
 
 # call makeTexFiles.py
-makeTexFiles(args=keyword_args())
+makeTexFiles(keywords_args=keyword_args(), exclude=exclude_args(), include_all_files=include_all_arg())
 
 # call tex compiler
 exec_dir = "./texFiles/"

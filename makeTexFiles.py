@@ -6,17 +6,49 @@ import russelFormat as rf
 import os
 import sys
 
+reserved_cmd = ['-k', '-e', '-a']
+
 # searches sys.argv for '-k' and returns a new list starting at that position
 def keyword_args():
 
+    start = 0
+
     for i, a in enumerate(sys.argv):
         if a == "-k":
-            return sys.argv[i:]
+            start = i
+        elif a in reserved_cmd and start > 0:
+            i -= 1 # to remove from list
+            break
+        
+
+    if start > 0:
+        return sys.argv[start:i+1]
 
     return []
 
+# check which args exclude
+def exclude_args():
+    start = 0
+
+    for i, a in enumerate(sys.argv):
+        if a == "-e":
+            start = i + 1
+        elif a in reserved_cmd and start > 0:
+            i -= 1 # to remove from list
+            break
+        
+
+    if start > 0:
+        return sys.argv[start:i+1]
+
+    return []
+
+# check argv for '-a'
+def include_all_arg():
+    return ('-a' in sys.argv)
+
 # put in function so it's call-able by other scripts
-def makeTexFiles(args = []):
+def makeTexFiles(keywords_args = [], exclude = [], include_all_files = False):
 
     tex_path = "CVout"
     resume_path = "texFiles"
@@ -41,8 +73,8 @@ def makeTexFiles(args = []):
     keywords = options['keywords']
 
     # overwrite keywords if args is not empty
-    if len(args) > 0:
-        keywords = args[1:]
+    if len(keywords_args) > 0:
+        keywords = keywords_args[1:]
 
     # only do this if there are some keywords
     if len(keywords) > 0:
@@ -67,6 +99,14 @@ def makeTexFiles(args = []):
                 if k.lower() in (item.lower() for item in w['relevant-skills']):
                     vol_obj.append(w)
 
+    # if any are empty, do not include on resume
+    if len(exp_obj) < 1: exclude.append('experience')
+    if len(proj_obj) < 1: exclude.append('projects')
+    if len(vol_obj) < 1: exclude.append('volunteer')
+    if len(data['skills']) < 1: exclude.append('skills')
+    if len(data['certifications']) < 1: exclude.append('certifications')
+    if len(data['education']) < 1: exclude.append('education')
+    if len(data['achievements']) < 1: exclude.append('achievements')
 
     # file for basic information - goes into /texFiles directory since it is imported seperately from other files in resume.tex
     info_str = rf.add_cv_info(data['first-name'], data['last-name'], 
@@ -125,18 +165,22 @@ def makeTexFiles(args = []):
         
     import_str = ""
 
-    # list by order specified in resumeOptions.json
-    for f in options['sections-to-include']:
+    # alphabetical in this case
+    if len(options['sections-to-include']) < 1 or include_all_files:
 
-        # do not include sections that are empty due to keywords
-        if f == 'experience' and len(exp_obj) > 0:
-            import_str += rf.add_import(f + ".tex")
-        elif f == 'projects' and len(proj_obj) > 0:
-            import_str += rf.add_import(f + ".tex")
-        elif f == 'volunteer' and len(vol_obj) > 0:
-            import_str += rf.add_import(f + ".tex")
-        elif f != 'experience' and f != 'projects' and f != 'volunteer':
-            import_str += rf.add_import(f + ".tex")
+        for f in os.listdir(tex_path):
+            # exclude sections in the 'exclude' list
+            if f not in exclude:
+                import_str += rf.add_import(f + ".tex")
+
+    else:
+
+        # list by order specified in resumeOptions.json
+        for f in options['sections-to-include']:
+
+            # exclude sections in the 'exclude' list
+            if f not in exclude:
+                import_str += rf.add_import(f + ".tex")
 
 
     with open(os.path.join( resume_path, 'inputs.tex'), 'w') as inputs_out:
@@ -147,7 +191,7 @@ def makeTexFiles(args = []):
 
 # Defining main function 
 def main(): 
-    makeTexFiles(args=keyword_args())
+    makeTexFiles(keywords_args=keyword_args(), exclude=exclude_args(), include_all_files=include_all_arg())
   
   
 # Using the special variable  
