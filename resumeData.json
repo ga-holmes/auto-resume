@@ -4,10 +4,11 @@
     "location": "Toronto, ON",
     "phone": "647-470-2263",
     "email": "garrett.a.holmes01@gmail.com",
-    "linkedIn": "https://www.linkedin.com/in/garrett-holmes-b4a219225/",
+    "linkedIn": "https://www.linkedin.com/in/garrett-a-holmes/",
     "website": "ga-holmes.github.io",
-    "github": "gh-holmes",
-    "summary": "Post-secondary graduate with experience in service and education industries looking for opportunities in diverse environments where I can grow my skills and gain unique experiences through personal interactions. Proven abilities as a facilitator and guide as well as in planning and organization in dynamic settings. Would like to contribute to a positive team atmosphere.",
+    "github": "ga-holmes",
+    "summary": "I'm a graduate student at Toronto Metropolitan University in the Spatial Analysis Program, with lots of experience with computer science, software development, GIS, and spatial analysis, looking to for opportunities to expand my skillset and explore interesting ideas and projects.",
+    "long-summary": "I'm a graduate student at Toronto Metropolitan University in the Master of Spatial Analysis program. With a High Honours Undergraduate degree in Computer Science from the University of Guelph I am a strong programmer with a background in python, C, and Javascript programming, having worked in computer vision and as a small-scale web developer. I'm a passionate about the outdoors and the environment, having worked as an outdoor educator and canoe camping guide. I've worked with the Toronto and Region Conservation Authority (TRCA) and Ducks Unlimited Canada in their conservation efforts in Southern Ontario.  My current research addresses salt vulnerability in urban watersheds and aims to use GIS and spatial analysis technology to identify salt-vulnerable areas in the Greater Toronto Area.",
     "certifications": [
         {
             "type": "Certifications",
@@ -17,23 +18,23 @@
     "skills": [
         {
             "type": "Programming Languages",
-            "list": ["C", "Python", "Java", "HTML", "CSS", "Javascript"]
+            "list": ["C", "Python", "SQL", "Java", "HTML", "CSS", "Javascript"]
+        },
+        {
+            "type": "GIS Tools",
+            "list": ["ESRI Products", "ArcGIS", "QGIS", "WhiteboxTools", "arcpy", "SPSS", "Spatial Databases", "geopandas"]
         },
         {
             "type": "Software Environments",
-            "list": ["Linux/UNIX", "React", "NodeJS", "AWS"]
+            "list": ["Linux/UNIX", "React", "React Native", "NodeJS", "LaTeX", "SQL DBMS"]
         },
         {
             "type": "Artificial Intelligence",
             "list": ["AI Models", "PyTorch", "numpy", "RCNN"]
         },
         {
-            "type": "GIS Tools",
-            "list": ["ArcGIS", "QGIS", "WhiteboxTools", "arcpy"]
-        },
-        {
             "type": "Office Tools",
-            "list": ["Microsoft Office", "Excel", "Adobe Suite"]
+            "list": ["Microsoft Office", "Excel", "Adobe Suite", "LaTeX"]
         },
         {
             "type": "Creative Skills",
@@ -42,19 +43,80 @@
     ],
     "education": [
         {
+            "school": "Toronto Metropolitan University",
+            "program": "Master of Spatial Analysis",
+            "points": [
+                "Ongoing Thesis"
+            ],
+            "courses": [
+                "Database Management and Spatial Technology", "Applied Spatial Statistics", "Cartography and Geovisualization", "GIS Project Management Applications", "Remote Sensing"
+            ],
+            "year": "Sept 2024 -",
+            "location": "Toronto, ON"
+        },
+        {
             "school": "University of Guelph",
             "program": "Honours Bachelor of Computing, Major in Computer Science, Minor in Geographic Information Systems and Environmental Analysis",
             "points": [
                 "Graduated with Distinction."
             ],
             "courses": [
-                "Software Engineering", "Software Development", "Computational Intelligence", "Computer Graphics", "Cloud Computing", "Parallel Programming", "Network Programming", "Systems Programming", "Compilers"
+                "Software Engineering", "Software Development", "Computational Intelligence", "Computer Graphics", "Cloud Computing", "Parallel Programming", "Network Programming", "Systems Programming", "Compilers", "Remote Sensing", "Applied Geomatics"
             ],
             "year": "Sept 2019 - Dec 2023",
             "location": "Guelph, ON"
         }
     ],
     "projects": [
+        {
+            "title": "Site Suitability Index for Small Wetlands in Southern Ontario",
+            "description": "Worked with Ducks Unlimited Canada to research and build an index model for identifying wetland conservation and conversion sites.",
+            "points": [
+                "Performed literature review of research on key wetland features and conservation.",
+                "Used GIS software to normalize data layers and create a suitability index using a Multi-Criteria-Evaluation approach.",
+                "Part of GIS Project Management Applications Course at TMU"
+            ],
+            "relevant-skills": ["GIS"],
+            "year": "Fall 2024",
+            "location": "Toronto Metropolitan University"
+        },
+        {
+            "title": "Evaluating Toronto's Bike Share Program",
+            "description": "A design and communication project exploring the use of and access to bike share in the city of Toronto.",
+            "points": [
+                "Worked with large datasets representing millions of ridership records",
+                "Using GIS software to consolidate and map ridership across the city of Toronto in 2024.",
+                "Using python scripting with GIS APIs and Pandas to generate statistics and create geometry."
+            ],
+            "relevant-skills": ["GIS-personal", "QGIS", "data management"],
+            "year": "Fall 2024",
+            "location": "Toronto Metropolitan University"
+        },
+        {
+            "title": "Productivity Apps",
+            "description": "A collection of finished and work-in-progress repositories with simple productivity tools available through my github page.",
+            "points": [
+                "budget-tracker-app for keeping track of day-to-day expenses written with React Native",
+                "mass-image-reseizer using openCV to resize images from a folder",
+                "pdf-combine-script a simple way of combining pdf files"
+            ],
+            "relevant-skills": ["git-personal"],
+            "year": "",
+            "location": ""
+        },
+        {
+            "title": "Auto Resume",
+            "description": "Use a user-defined LaTeX schematic to generate a formatted resume with relevant points from user information.",
+            "points": [
+                "Designed project overview including formatting of input JSON data.",
+                "Developed generic python wrapper to run user-written code corresponding to a given LaTeX format.",
+                "Was used to make this resume!",
+                "Available on github."
+            ],
+            "relevant-skills": ["Code-personal", "LaTeX"],
+            "year": "2024",
+            "location": ""
+        },
         {
             "title": "Ant - Director of Photography, Producer",
             "description": "Independently produced feature length film.",
@@ -75,11 +137,12 @@
                 "Collaborated with students and graduate to identify areas of concern, research plan.",
                 "Performed a detailed literature review of moose habitat suitability and environmental concerns related to indstrial logging, including government policy and forestry guidelines.",
                 "Investaged and prepared vector data provided through government resources and forestry for analysis.",
-                "Derived raster layers and relevant information and developed a Habitat suitability model using ArcGIS pro."
+                "Derived raster layers and relevant information and developed a Habitat suitability model using ArcGIS pro.",
+                "Available through my website."
             ],
-            "relevant-skills": ["GIS", "ESRI", "ArcGIS", "Research", "Team", "Literature Review", "Enviornmental Analysis", "Data processing", "data management"],
+            "relevant-skills": ["GIS", "ESRI", "ArcGIS", "Team", "Literature Review", "Enviornmental Analysis", "Data processing", "data management"],
             "year": "2023",
-            "location": ""
+            "location": "University of Guelph"
         },
         {
             "title": "Program Planner Website",
@@ -90,7 +153,7 @@
                 "Organized weekly requirements, scheduled team meetings, lead code review sessions",
                 "Used Flask, NGINX, Python for backend development on a Linux server."
             ],
-            "relevant-skills": ["Javascript", "HTML", "React", "Python", "Full-stack", "AGILE", "Team"],
+            "relevant-skills": [ "Code", "Javascript", "HTML", "React", "Python", "Full-stack", "AGILE", "Team"],
             "year": "2022",
             "location": ""
         },
@@ -119,6 +182,49 @@
     ],
     "work-experience": [
         {
+            "title": "GIS Intern",
+            "employer": "Toronto and Region Conservation Authority",
+            "points": [
+                "Worked with interdisciplinary teams to analyze business and conservation data and create maps and figures.",
+                "Used ESRI products to design dashboards, create custom raster functions, support GIS data product creation.",
+                "Used Feature Manipulation Engine and python to automate data workflows and generate detailed analytics reports."
+            ],
+            "relevant-skills": [
+                "GIS",
+                "team",
+                "conservation",
+                "intern",
+                "trca",
+                "python"
+            ],
+            "year": "2025",
+            "location": "Toronto, ON"
+        },
+        {
+            "title": "Electronics Testing and Assembly",
+            "employer": "Per Vices Corporation",
+            "points": [
+                "Worked with engineering team to bring-up and test incoming PCB boards.",
+                "Assembled base units and worked with sensitive electronic hardware.",
+                "Collaborated in a small team environment to build and ship complex devices."
+            ],
+            "relevant-skills": ["tech", "team", "electronics", "hardware", "pv"],
+            "year": "2024",
+            "location": "Toronto, ON"
+        },
+        {
+            "title": "Technical Manager",
+            "employer": "Hardest Working Realty Team",
+            "points": [
+                "Responsible for maintaining team website, adding and editing listings, creating new sections and UI elements.",
+                "Performed migration of all static pages to pages using dynamically stored listing data using a CMS.",
+                "Consulting on all forms of technical questions relating to domains, email, cloud storage, personal devices, etc."
+            ],
+            "relevant-skills": ["Code", "web"],
+            "year": "2024 - ",
+            "location": "Toronto, ON"
+        },
+        {
             "title": "Outdoor Educator",
             "employer": "Kandalore Outdoor Education Centre",
             "points": [
@@ -127,8 +233,8 @@
                 "Facilitated technical activities including indoor and outdoor rock climbing, high ropes course, map orienteering, etc.",
                 "Worked with dedicated staff team to maintain a functioning site including a variety of manual labour and maintenance tasks."
             ],
-            "relevant-skills": ["leadership", "hard skills", "climbing", "team", "education", "outdoors", "maintenance", "communication", "management"],
-            "year": "2023",
+            "relevant-skills": ["OEC", "leadership", "hard skills", "climbing", "team", "education", "outdoors", "maintenance", "communication", "management"],
+            "year": "2023, 2024",
             "location": "Kawartha Highlands, ON"
         },
         {
@@ -151,9 +257,10 @@
                 "Worked under Dr. Stacey Scott to review and summarize academic publications relating precision agriculture and computer vision.",
                 "Self-directed research of contemporary neural network concepts and methods.",
                 "Exploration of Mask-RCNN, YOLO, detectron2 API networks.",
-                "Used PyTorch and OpenCV to train a residual neural network to classify cattle in frames of video to support concurrent agriculture research."
+                "Used PyTorch and OpenCV to train a residual neural network to classify cattle in frames of video to support concurrent agriculture research.",
+                "Code available on github."
             ],
-            "relevant-skills": ["AI", "research", "Literature Review", "Python", "openCV", "Computer Vision", "MaskRCNN", "resnet", "neural networks", "Application Development", "pytorch", "numpy"],
+            "relevant-skills": ["Code", "AI", "research", "Literature Review", "Python", "openCV", "Computer Vision", "MaskRCNN", "resnet", "neural networks", "Application Development", "pytorch", "numpy"],
             "year": "2022",
             "location": "Guelph, ON"
         },
@@ -201,7 +308,7 @@
     "achievements": [
         {
             "award": "Graduated with Distinction",
-            "event": "Univrsity of Guelph",
+            "event": "University of Guelph",
             "location": "Guelph, ON",
             "year": "2023"
         }

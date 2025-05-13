@@ -1,15 +1,13 @@
 {
     "keywords": [
-        "ai"
+        "GIS",
+        "research"
     ],
     "sections-to-include": [
         "summary",
-        "certs",
-        "education",
-        "experience",
-        "projects",
-        "volunteer",
         "skills",
-        "achievements"
+        "education",
+        "projects",
+        "experience"
     ]
 }
