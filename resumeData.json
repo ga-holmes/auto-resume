@@ -1,0 +1,88 @@
+{
+    "first-name": "John",
+    "last-name": "Doe",
+    "location": "Kalamazoo",
+    "phone": "123-456-7890",
+    "email": "John@email.com",
+    "linkedIn": "",
+    "website": "",
+    "git": "",
+    "summary": "My name is John!",
+    "long-summary": "My name is John and I like to work!",
+    "certifications": [
+        {
+            "type": "First Aid",
+            "list": [
+                "CPR",
+                "Bronze Cross"
+            ]
+        }
+    ],
+    "skills": [
+        {
+            "type": "Programming",
+            "list": [
+                "Python",
+                "Java"
+            ]
+        },
+        {
+            "type": "Office",
+            "list": [
+                "Microsoft Word",
+                "Microsoft Excel"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "school": "St Johns University",
+            "program": "Undergraduate of Resume Writing",
+            "points": [
+                "Worked with classmates on proper resume standards.",
+                "Designed cover letter templates."
+            ],
+            "courses": ["Resumes 101", "Resumes 201"],
+            "year": "1999",
+            "location": "Kalamazoo Too"
+        }
+    ],
+    "projects": [
+        {
+            "title": "",
+            "description": "",
+            "points": [],
+            "relevant-skills": [],
+            "year": "",
+            "location": ""
+        }
+    ],
+    "work-experience": [
+        {
+            "title": "",
+            "employer": "",
+            "points": [],
+            "relevant-skills": [],
+            "year": "",
+            "location": ""
+        }
+    ],
+    "volunteer-experience": [
+        {
+            "title": "",
+            "organization": "",
+            "points": [],
+            "relevant-skills": [],
+            "year": "",
+            "location": ""
+        }
+    ],
+    "achievements": [
+        {
+            "award": "",
+            "event": "",
+            "location": "",
+            "year": ""
+        }
+    ]
+}
