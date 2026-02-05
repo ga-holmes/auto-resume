@@ -22,7 +22,7 @@ The russell class is available on its own at https://github.com/themagicalmammal
 
 Python 3.x must be installed on your computer
 
-To compile your finised files, install a LaTeX compiler for your system. I am using MiKTeX due to its small size:
+To compile your finised files, install a LaTeX compiler for your system (you may need to install system-wide/as an administrator to access commands from the command line/inside python). I am using MiKTeX due to its small size:
 - Install: https://miktex.org/
 
 ### Filling in the JSON

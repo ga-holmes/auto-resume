@@ -23,9 +23,9 @@ os.chdir(exec_dir)
 
 os.system(to_run)
 
-files = os.listdir(".")
-for f in files:
-    if f.endswith(".tex") or f.endswith(".cls") or f.endswith(".pdf"):
-        continue
-    else:
-        os.remove(os.path.join(".", f))
+# files = os.listdir(".")
+# for f in files:
+#     if f.endswith(".tex") or f.endswith(".cls") or f.endswith(".pdf"):
+#         continue
+#     else:
+#         os.remove(os.path.join(".", f))

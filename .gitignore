@@ -6,3 +6,4 @@ CVout/*.tex
 *.pdf
 inputs.tex
 info.tex
+resumeDataInternal.json

@@ -47,6 +47,35 @@ def exclude_args():
 def include_all_arg():
     return ('-a' in sys.argv)
 
+def latex_escape(s: str) -> str:
+    replacements = {
+        '\\': r'\textbackslash{}',
+        '&': r'\&',
+        '%': r'\%',
+        '$': r'\$',
+        '#': r'\#',
+        '_': r'\_',
+        '{': r'\{',
+        '}': r'\}',
+        '~': r'\textasciitilde{}',
+        '^': r'\textasciicircum{}',
+    }
+    for k, v in replacements.items():
+        s = s.replace(k, v)
+    return s
+
+
+def latex_sanitize(obj):
+    if isinstance(obj, str):
+        return latex_escape(obj)
+    elif isinstance(obj, list):
+        return [latex_sanitize(x) for x in obj]
+    elif isinstance(obj, dict):
+        return {k: latex_sanitize(v) for k, v in obj.items()}
+    else:
+        return obj
+
+
 # put in function so it's call-able by other scripts
 def makeTexFiles(keywords_args = [], exclude = [], include_all_files = False):
 
@@ -59,7 +88,9 @@ def makeTexFiles(keywords_args = [], exclude = [], include_all_files = False):
     # Opening JSON file
     with open('resumeData.json', 'r', encoding='utf-8') as f:
         # returns JSON object as a dictionary
-        data = json.load(f)
+        raw_data = json.load(f)
+
+    data = latex_sanitize(raw_data)
     
     # Opening options JSON file
     with open('resumeOptions.json', 'r', encoding='utf-8') as of:
@@ -88,15 +119,15 @@ def makeTexFiles(keywords_args = [], exclude = [], include_all_files = False):
             
             # items in the lists are converted to lowercase for comparison (NOTE: slow?)
             for w in data['work-experience']:
-                if any(k.lower() in item.lower() for item in w['relevant-skills']):
+                if any(k.lower() == item.lower() for item in w['relevant-skills']):
                     exp_obj.append(w)
 
             for w in data['projects']:
-                if any(k.lower() in item.lower() for item in w['relevant-skills']):
+                if any(k.lower() == item.lower() for item in w['relevant-skills']):
                     proj_obj.append(w)
 
             for w in data['volunteer-experience']:
-                if any(k.lower() in item.lower() for item in w['relevant-skills']):
+                if any(k.lower() == item.lower() for item in w['relevant-skills']):
                     vol_obj.append(w)
 
     # if any are empty, do not include on resume
