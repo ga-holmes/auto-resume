@@ -6,7 +6,7 @@ import russelFormat as rf
 import os
 import sys
 
-reserved_cmd = ['-k', '-e', '-a', '-n']
+reserved_cmd = ['-k', '-e', '-a', '-n', '-d']
 
 # searches sys.argv for '-k' and returns a new list starting at that position
 def keyword_args():
@@ -77,7 +77,7 @@ def latex_sanitize(obj):
 
 
 # put in function so it's call-able by other scripts
-def makeTexFiles(keywords_args = [], exclude = [], include_all_files = False):
+def makeTexFiles(keywords_args = [], exclude = [], include_all_files = False, resume_data_file="resumeData.json"):
 
     tex_path = "CVout"
     resume_path = "texFiles"
@@ -85,17 +85,21 @@ def makeTexFiles(keywords_args = [], exclude = [], include_all_files = False):
     if not os.path.exists(tex_path):
         os.makedirs(tex_path)
     
+    # Opening options JSON file
+    with open('resumeOptions.json', 'r', encoding='utf-8') as of:
+        options = json.load(of)
+    
+    # get data file path if specified
+    if "data-file-path" in options:
+        resume_data_file = options["data-file-path"]
+
     # Opening JSON file
-    with open('resumeData.json', 'r', encoding='utf-8') as f:
+    with open(resume_data_file, 'r', encoding='utf-8') as f:
         # returns JSON object as a dictionary
         raw_data = json.load(f)
 
     data = latex_sanitize(raw_data)
     
-    # Opening options JSON file
-    with open('resumeOptions.json', 'r', encoding='utf-8') as of:
-        options = json.load(of)
-
     # filter sections to only include elements with keywords
     exp_obj = data['work-experience'] # by deafault, set to entire list of objects
     proj_obj = data['projects'] # by deafault, set to entire list of objects
@@ -141,12 +145,12 @@ def makeTexFiles(keywords_args = [], exclude = [], include_all_files = False):
 
     # file for basic information - goes into /texFiles directory since it is imported seperately from other files in resume.tex
     info_str = rf.add_cv_info(data['first-name'], data['last-name'], 
-                            location=data['location'],
-                            phone=data['phone'],
-                            email=data['email'],
-                            linkedIn=data['linkedIn'],
-                            website=data['website'],
-                            github=data['github']
+                            location=data.get('location'),
+                            phone=data.get('phone'),
+                            email=data.get('email'),
+                            linkedIn=data.get('linkedIn'),
+                            website=data.get('website'),
+                            github=data.get('github')
                             )
     with open(os.path.join( resume_path, 'info.tex'), 'w') as i_out:
         i_out.write(info_str)

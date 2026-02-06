@@ -2,8 +2,15 @@ import os
 import sys
 from makeTexFiles import *
 
+if '-d' in sys.argv and '-a' not in sys.argv:
+    i = sys.argv.index('-d')
+    if i+1 < len(sys.argv):
+        data_filename = sys.argv[i+1]
+else:
+    data_filename = "resumeData.json"
+
 # call makeTexFiles.py
-makeTexFiles(keywords_args=keyword_args(), exclude=exclude_args(), include_all_files=include_all_arg())
+makeTexFiles(keywords_args=keyword_args(), exclude=exclude_args(), include_all_files=include_all_arg(), resume_data_file=data_filename)
 
 filename = "resume"
 

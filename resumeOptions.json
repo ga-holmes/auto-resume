@@ -9,5 +9,6 @@
         "education",
         "experience",
         "projects"
-    ]
+    ],
+    "data-file-path": "resumeData.json"
 }

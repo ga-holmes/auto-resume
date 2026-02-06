@@ -66,6 +66,9 @@ Command Line Args (`makeTexFiles.py` & `makeResume.py`):
 - `-n`: set the name of the output PDF *NOTE: `makeResume.py` ONLY*
     - NOTE: `-n resume.pdf` will output `resume.pdf.pdf`
     - default filename is `resume`
+- `-d`: set the filepath for the resumeData json file if desired to use a different file/filename
+    - NOTE: This can be specified in `resumeOptions.json` as well. 
+    - Whatever is in the options file takes priority over the command line, unless `-a` is used
 
 - example: `py makeResume.py -k 1 2 3 -e 4 5 6`
     - keywords: 1, 2, 3
