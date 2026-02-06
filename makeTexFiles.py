@@ -123,15 +123,15 @@ def makeTexFiles(keywords_args = [], exclude = [], include_all_files = False, re
             
             # items in the lists are converted to lowercase for comparison (NOTE: slow?)
             for w in data['work-experience']:
-                if any(k.lower() == item.lower() for item in w['relevant-skills']):
+                if any(k.lower() == item.lower() and w not in exp_obj for item in w['relevant-skills']):
                     exp_obj.append(w)
 
             for w in data['projects']:
-                if any(k.lower() == item.lower() for item in w['relevant-skills']):
+                if any(k.lower() == item.lower() and w not in proj_obj for item in w['relevant-skills']):
                     proj_obj.append(w)
 
             for w in data['volunteer-experience']:
-                if any(k.lower() == item.lower() for item in w['relevant-skills']):
+                if any(k.lower() == item.lower() and w not in vol_obj for item in w['relevant-skills']):
                     vol_obj.append(w)
 
     # if any are empty, do not include on resume
